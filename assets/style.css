@@ -353,11 +353,20 @@ a {
   overflow: hidden;
 }
 
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 300px);
+  align-items: center;
+  gap: 1.2rem;
+}
+
 .hero-shell {
   text-align: center;
   max-width: 900px;
   position: relative;
   z-index: 3;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .hero .container {
@@ -587,6 +596,60 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.8rem;
+}
+
+.hero-github-card {
+  width: min(300px, 100%);
+  justify-self: end;
+  z-index: 4;
+  padding: 1.2rem;
+  animation: cardFloat 5.5s ease-in-out infinite;
+}
+
+.github-title {
+  margin-bottom: 0.2rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: #c8dcf8;
+  text-transform: uppercase;
+}
+
+.github-handle {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Sora", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #f3f8ff;
+}
+
+.github-meta {
+  margin-top: 0.55rem;
+  color: #b2c8e6;
+  font-size: 0.92rem;
+}
+
+.github-badges {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.github-badges span {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(165, 196, 238, 0.26);
+  background: rgba(16, 31, 56, 0.84);
+  border-radius: 999px;
+  padding: 0.22rem 0.6rem;
+  font-size: 0.78rem;
+  color: #d6e7fe;
+}
+
+.github-cta {
+  margin-top: 1rem;
+  width: 100%;
 }
 
 .hero-stats article {
@@ -1011,6 +1074,16 @@ h1 {
   .hero {
     min-height: auto;
     padding-top: 2.8rem;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-github-card {
+    justify-self: center;
+    width: min(420px, 100%);
+    margin-top: 0.5rem;
   }
 
   .about-grid,
