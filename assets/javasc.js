@@ -277,7 +277,7 @@ if (heroSection && heroAnimatedBg && !prefersReducedMotion && !performanceLite &
     targetX = x * 16;
     targetY = y * 12;
     startParallax();
-  };
+  });
 
   heroSection.addEventListener("mouseleave", () => {
     targetX = 0;
