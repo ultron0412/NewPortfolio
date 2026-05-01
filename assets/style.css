@@ -15,6 +15,136 @@
   --shadow-md: 0 16px 30px rgba(0, 0, 0, 0.28);
 }
 
+@keyframes driftBackground {
+  0% {
+    background-position: 0% 0%, 0% 0%, 0% 0%;
+  }
+  50% {
+    background-position: 40px -30px, -30px 20px, 0% 0%;
+  }
+  100% {
+    background-position: 80px -60px, -60px 40px, 0% 0%;
+  }
+}
+
+@keyframes blobFloat {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(44px, -40px) scale(1.08);
+  }
+  50% {
+    transform: translate(-26px, 24px) scale(0.92);
+  }
+  75% {
+    transform: translate(32px, 40px) scale(1.04);
+  }
+}
+
+@keyframes orbitRotate {
+  from {
+    transform: rotate(0deg) translateX(22px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(22px) rotate(-360deg);
+  }
+}
+
+@keyframes scanlineMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(140, 181, 243, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(140, 181, 243, 0.34);
+  }
+}
+
+@keyframes textShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes glitchA {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(-2px, 1px);
+  }
+  50% {
+    transform: translate(2px, -1px);
+  }
+  75% {
+    transform: translate(-1px, -1px);
+  }
+}
+
+@keyframes glitchB {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(2px, -2px);
+  }
+  40% {
+    transform: translate(-2px, 2px);
+  }
+  60% {
+    transform: translate(1px, 2px);
+  }
+  80% {
+    transform: translate(-1px, -2px);
+  }
+}
+
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes sectionGlow {
+  0% {
+    opacity: 0.16;
+    transform: translateX(-16%);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateX(24%);
+  }
+}
+
+@keyframes borderSweep {
+  0% {
+    transform: translateX(-130%);
+  }
+  100% {
+    transform: translateX(130%);
+  }
+}
+
 *,
 *::before,
 *::after {
