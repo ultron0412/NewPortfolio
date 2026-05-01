@@ -1,0 +1,29 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f8f6ff" />
+      <stop offset="1" stop-color="#e3ddff" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" rx="28" fill="url(#bg)" />
+  <rect x="60" y="58" width="1080" height="644" rx="24" fill="#ffffff" stroke="#c3b7f7" stroke-width="3" />
+  <text x="100" y="155" fill="#34295d" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="700">
+    Oracle University
+  </text>
+  <text x="100" y="240" fill="#5d4b9d" font-family="Segoe UI, Arial, sans-serif" font-size="34">
+    Certificate of Achievement
+  </text>
+  <text x="100" y="346" fill="#2b2154" font-family="Segoe UI, Arial, sans-serif" font-size="46" font-weight="700">
+    OCI 2025 Certified AI Foundations Associate
+  </text>
+  <text x="100" y="430" fill="#6655a3" font-family="Segoe UI, Arial, sans-serif" font-size="30">
+    Awarded to: Ayush Jung Kunwar
+  </text>
+  <text x="100" y="500" fill="#6655a3" font-family="Segoe UI, Arial, sans-serif" font-size="30">
+    Date: Oct 2025
+  </text>
+  <circle cx="1010" cy="500" r="80" fill="#f8f5ff" stroke="#a693eb" stroke-width="6" />
+  <text x="948" y="510" fill="#5e49af" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">
+    AI
+  </text>
+</svg>
