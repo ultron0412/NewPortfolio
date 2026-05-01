@@ -82,16 +82,16 @@ if (progressElement) {
   updateProgress();
 }
 
-const previewModal = document.getElementById("cert-preview-modal");
-const previewTitle = document.getElementById("cert-preview-title");
-const previewClose = document.getElementById("cert-preview-close");
-const previewPdf = document.getElementById("cert-preview-pdf");
-const previewImage = document.getElementById("cert-preview-image");
-const previewOpen = document.getElementById("cert-preview-open");
+const previewInline = document.getElementById("cert-preview-inline");
+const previewTitle = document.getElementById("cert-preview-inline-title");
+const previewClose = document.getElementById("cert-preview-inline-close");
+const previewPdf = document.getElementById("cert-preview-inline-pdf");
+const previewImage = document.getElementById("cert-preview-inline-image");
+const previewOpen = document.getElementById("cert-preview-inline-open");
 const previewButtons = document.querySelectorAll(".cert-preview-btn");
 
 if (
-  previewModal &&
+  previewInline &&
   previewTitle &&
   previewClose &&
   previewPdf &&
@@ -107,9 +107,7 @@ if (
   };
 
   const closePreview = () => {
-    previewModal.classList.remove("is-open");
-    previewModal.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
+    previewInline.hidden = true;
     resetPreview();
   };
 
@@ -127,9 +125,8 @@ if (
       previewImage.style.display = "block";
     }
 
-    previewModal.classList.add("is-open");
-    previewModal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
+    previewInline.hidden = false;
+    previewInline.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   previewButtons.forEach((button) => {
@@ -144,16 +141,4 @@ if (
   });
 
   previewClose.addEventListener("click", closePreview);
-
-  previewModal.addEventListener("click", (event) => {
-    if (event.target === previewModal) {
-      closePreview();
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && previewModal.classList.contains("is-open")) {
-      closePreview();
-    }
-  });
 }
