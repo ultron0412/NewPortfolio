@@ -1,0 +1,38 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E1C2F" />
+      <stop offset="1" stop-color="#183E68" />
+    </linearGradient>
+    <linearGradient id="ring" x1="265" y1="140" x2="935" y2="535" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7ED7FF" />
+      <stop offset="1" stop-color="#8D89FF" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)" />
+  <g opacity="0.2">
+    <circle cx="228" cy="138" r="120" stroke="#9FCBFF" />
+    <circle cx="997" cy="540" r="156" stroke="#6CD8C5" />
+  </g>
+  <g>
+    <circle cx="600" cy="338" r="195" stroke="url(#ring)" stroke-width="10" />
+    <circle cx="600" cy="338" r="125" stroke="#8BC6FF" stroke-opacity="0.8" stroke-width="4" />
+    <rect x="545" y="254" width="110" height="135" rx="22" fill="#DDF2FF" />
+    <circle cx="578" cy="312" r="10" fill="#163A5E" />
+    <circle cx="622" cy="312" r="10" fill="#163A5E" />
+    <rect x="567" y="343" width="66" height="14" rx="7" fill="#163A5E" />
+    <rect x="564" y="228" width="72" height="18" rx="9" fill="#A4D5FF" />
+  </g>
+  <g opacity="0.86" fill="#C8E6FF">
+    <rect x="323" y="293" width="96" height="15" rx="7.5" />
+    <rect x="781" y="363" width="96" height="15" rx="7.5" />
+    <rect x="350" y="347" width="72" height="15" rx="7.5" />
+    <rect x="778" y="309" width="72" height="15" rx="7.5" />
+  </g>
+  <text x="70" y="587" fill="#DCEFFF" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="700">
+    Jarvis - AI Powered Personal Assistant
+  </text>
+  <text x="72" y="627" fill="#9FC3DE" font-family="Segoe UI, Arial, sans-serif" font-size="24">
+    Offline local LLM assistant with natural-language command execution
+  </text>
+</svg>
