@@ -1,0 +1,39 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C2631" />
+      <stop offset="1" stop-color="#1B5A70" />
+    </linearGradient>
+    <linearGradient id="doc" x1="430" y1="152" x2="780" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E7F8FF" />
+      <stop offset="1" stop-color="#BFE9FF" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)" />
+  <g opacity="0.2">
+    <circle cx="196" cy="572" r="136" stroke="#8FD8FF" />
+    <circle cx="1022" cy="106" r="120" stroke="#86D6C2" />
+  </g>
+  <g>
+    <rect x="428" y="154" width="344" height="365" rx="24" fill="url(#doc)" />
+    <rect x="484" y="226" width="230" height="16" rx="8" fill="#2E6A86" />
+    <rect x="484" y="262" width="182" height="14" rx="7" fill="#4A839D" />
+    <rect x="484" y="304" width="230" height="12" rx="6" fill="#3A748F" />
+    <rect x="484" y="336" width="210" height="12" rx="6" fill="#3A748F" />
+    <rect x="484" y="368" width="170" height="12" rx="6" fill="#3A748F" />
+    <circle cx="744" cy="188" r="34" fill="#2D7898" />
+    <path d="M732 188L741 197L758 179" stroke="#E9FFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <g opacity="0.84" fill="#B7E8FF">
+    <rect x="286" y="262" width="108" height="14" rx="7" />
+    <rect x="820" y="315" width="108" height="14" rx="7" />
+    <rect x="286" y="304" width="76" height="14" rx="7" />
+    <rect x="852" y="357" width="76" height="14" rx="7" />
+  </g>
+  <text x="70" y="587" fill="#DCF6FF" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="700">
+    AI Resume Generator
+  </text>
+  <text x="72" y="627" fill="#A8D5E6" font-family="Segoe UI, Arial, sans-serif" font-size="24">
+    Full-stack resume builder with locally hosted LLM assistance
+  </text>
+</svg>
