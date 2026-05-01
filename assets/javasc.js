@@ -142,3 +142,42 @@ if (
 
   previewClose.addEventListener("click", closePreview);
 }
+
+const heroSection = document.getElementById("home");
+const heroAnimatedBg = heroSection?.querySelector(".hero-animated-bg");
+
+if (heroSection && heroAnimatedBg && !prefersReducedMotion) {
+  let frame = 0;
+  let targetX = 0;
+  let targetY = 0;
+  let currentX = 0;
+  let currentY = 0;
+
+  const animateParallax = () => {
+    currentX += (targetX - currentX) * 0.08;
+    currentY += (targetY - currentY) * 0.08;
+    heroAnimatedBg.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+    frame = window.requestAnimationFrame(animateParallax);
+  };
+
+  heroSection.addEventListener("mousemove", (event) => {
+    const rect = heroSection.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    targetX = x * 24;
+    targetY = y * 18;
+  });
+
+  heroSection.addEventListener("mouseleave", () => {
+    targetX = 0;
+    targetY = 0;
+  });
+
+  frame = window.requestAnimationFrame(animateParallax);
+
+  window.addEventListener("beforeunload", () => {
+    if (frame) {
+      window.cancelAnimationFrame(frame);
+    }
+  });
+}
