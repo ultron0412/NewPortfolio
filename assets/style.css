@@ -412,27 +412,72 @@ h1 {
   color: var(--muted);
 }
 
-.cert-list {
-  margin: 0;
-  padding-left: 1.2rem;
+.cert-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.55rem 1.4rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-.cert-list li {
-  position: relative;
+.cert-card {
+  display: grid;
+  gap: 0.62rem;
 }
 
-.cert-list li::before {
-  content: "";
-  position: absolute;
-  left: -0.88rem;
-  top: 0.64rem;
-  width: 0.36rem;
-  height: 0.36rem;
-  border-radius: 99px;
-  background: var(--accent);
+.cert-card h3 {
+  margin-bottom: 0.2rem;
+  font-size: 1.03rem;
+}
+
+.cert-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.cert-card a {
+  justify-self: start;
+  text-decoration: none;
+  color: #0b4f78;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.35rem 0.62rem;
+  border-radius: 0.55rem;
+  background: #e8f4ff;
+  border: 1px solid #c8e3f9;
+}
+
+.cert-card a:hover {
+  background: #d9eeff;
+}
+
+.cert-thumb {
+  margin: 0;
+  min-height: 118px;
+  border-radius: 0.78rem;
+  border: 1px solid #d5e3ee;
+  background: linear-gradient(180deg, #f7fbff 0%, #eef5fb 100%);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+
+.cert-thumb img {
+  width: 100%;
+  height: 108px;
+  object-fit: contain;
+}
+
+.pdf-thumb {
+  border-style: dashed;
+  border-color: #a8c5dd;
+  background: linear-gradient(180deg, #f3f9ff 0%, #e5f0fb 100%);
+}
+
+.pdf-thumb span {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.1rem;
+  color: #0c4c74;
+  letter-spacing: 0.05em;
 }
 
 .site-footer {
@@ -507,12 +552,8 @@ h1 {
   .skills-grid,
   .project-grid,
   .impact-strip,
-  .cert-list {
+  .cert-grid {
     grid-template-columns: 1fr;
-  }
-
-  .cert-list {
-    padding-left: 1.15rem;
   }
 }
 
