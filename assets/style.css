@@ -526,6 +526,10 @@ h1 {
   .project-grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .cert-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 720px) {
