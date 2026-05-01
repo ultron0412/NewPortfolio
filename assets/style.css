@@ -524,12 +524,16 @@ h1 {
 
 .pdf-thumb {
   border-style: dashed;
+  padding: 0.35rem;
 }
 
-.pdf-thumb span {
-  font-family: "Sora", sans-serif;
-  font-size: 1.08rem;
-  color: #d6e7ff;
+.pdf-thumb iframe {
+  width: 100%;
+  height: 108px;
+  border: 0;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  pointer-events: none;
 }
 
 .cert-preview-inline {
