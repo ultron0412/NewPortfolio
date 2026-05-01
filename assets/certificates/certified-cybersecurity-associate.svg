@@ -1,0 +1,36 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Certified Cybersecurity Associate Certificate</title>
+  <desc id="desc">Preview card for Certified Cybersecurity Associate certification.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#13131a" />
+      <stop offset="100%" stop-color="#1f2937" />
+    </linearGradient>
+    <linearGradient id="band" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fb7185" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="800" rx="36" fill="url(#bg)" />
+  <rect x="38" y="38" width="1124" height="724" rx="30" fill="#131b2b" stroke="#344155" stroke-width="3" />
+
+  <rect x="72" y="88" width="1056" height="18" rx="9" fill="url(#band)" opacity="0.9" />
+
+  <text x="96" y="188" fill="#f8fafc" font-size="36" font-family="'Segoe UI', Arial, sans-serif" font-weight="700">DANPHELINK</text>
+  <text x="96" y="244" fill="#b6c4d9" font-size="24" font-family="'Segoe UI', Arial, sans-serif">This certifies that</text>
+
+  <text x="96" y="324" fill="#fdf2f8" font-size="52" font-family="'Segoe UI', Arial, sans-serif" font-weight="700">Ayush Jung Kunwar</text>
+
+  <text x="96" y="396" fill="#fbcfe8" font-size="30" font-family="'Segoe UI', Arial, sans-serif">Certified Cybersecurity Associate</text>
+
+  <rect x="96" y="448" width="620" height="120" rx="18" fill="#1e293b" stroke="#475569" />
+  <text x="128" y="500" fill="#fda4af" font-size="21" font-family="'Segoe UI', Arial, sans-serif" font-weight="600">Issued by DanpheLink</text>
+  <text x="128" y="540" fill="#f8cfe0" font-size="20" font-family="'Segoe UI', Arial, sans-serif">Date: 2025</text>
+
+  <circle cx="1004" cy="512" r="86" fill="#1f2937" stroke="#f472b6" stroke-width="4" />
+  <text x="1004" y="492" text-anchor="middle" fill="#fda4af" font-size="24" font-family="'Segoe UI', Arial, sans-serif" font-weight="700">SECURE</text>
+  <text x="1004" y="528" text-anchor="middle" fill="#f8fafc" font-size="18" font-family="'Segoe UI', Arial, sans-serif">ASSOCIATE</text>
+
+  <text x="96" y="684" fill="#94a3b8" font-size="18" font-family="'Segoe UI', Arial, sans-serif">Credential Preview</text>
+</svg>
