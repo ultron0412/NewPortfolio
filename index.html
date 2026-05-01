@@ -429,6 +429,20 @@
               </div>
             </article>
           </div>
+
+          <section class="panel cert-preview-inline" id="cert-preview-inline" hidden>
+            <div class="cert-preview-inline-head">
+              <h3 id="cert-preview-inline-title">Certificate Preview</h3>
+              <button type="button" id="cert-preview-inline-close" class="cert-preview-inline-close">Close</button>
+            </div>
+            <div class="cert-preview-inline-body">
+              <iframe id="cert-preview-inline-pdf" class="cert-preview-inline-pdf" title="Certificate PDF Preview"></iframe>
+              <img id="cert-preview-inline-image" class="cert-preview-inline-image" alt="Certificate image preview" />
+            </div>
+            <div class="cert-preview-inline-foot">
+              <a id="cert-preview-inline-open" href="#" target="_blank" rel="noreferrer">Open In New Tab</a>
+            </div>
+          </section>
         </div>
       </section>
 
@@ -465,22 +479,6 @@
         <p>&copy; <span id="year"></span> Ayush Jung Kunwar. All rights reserved.</p>
       </div>
     </footer>
-
-    <div class="preview-modal" id="cert-preview-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cert-preview-title">
-      <div class="preview-dialog">
-        <div class="preview-header">
-          <h3 id="cert-preview-title">Certificate Preview</h3>
-          <button type="button" class="preview-close" id="cert-preview-close" aria-label="Close preview">Close</button>
-        </div>
-        <div class="preview-content">
-          <iframe id="cert-preview-pdf" class="preview-pdf" title="Certificate PDF Preview"></iframe>
-          <img id="cert-preview-image" class="preview-image" alt="Certificate image preview" />
-        </div>
-        <div class="preview-footer">
-          <a id="cert-preview-open" href="#" target="_blank" rel="noreferrer">Open In New Tab</a>
-        </div>
-      </div>
-    </div>
 
     <script src="./assets/javasc.js"></script>
     <script src="./assets/canvas.js"></script>
