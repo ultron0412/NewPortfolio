@@ -25,6 +25,7 @@ This is a static site and can be deployed directly to:
 - `assets/canvas.css` - canvas/background styling
 - `assets/javasc.js` - UI interactions (reveal animation + nav state)
 - `assets/canvas.js` - particle canvas engine
+- `assets/certificates/` - certificate SVG/PDF assets used in the Certifications section
 - `css/style.css` - stylesheet entrypoint for imports
 - `particles.js` - particle bootstrap file
 - `CNAME` - custom domain placeholder for static hosting
