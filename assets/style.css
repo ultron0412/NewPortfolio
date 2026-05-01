@@ -606,6 +606,28 @@ h1 {
   animation: cardFloat 5.5s ease-in-out infinite;
 }
 
+.github-avatar-link {
+  display: inline-flex;
+  margin-bottom: 0.58rem;
+  text-decoration: none;
+}
+
+.github-avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(170, 202, 246, 0.52);
+  background: rgba(15, 30, 52, 0.9);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35), 0 0 0 6px rgba(130, 171, 238, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.github-avatar-link:hover .github-avatar {
+  transform: scale(1.04);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4), 0 0 0 8px rgba(130, 171, 238, 0.16);
+}
+
 .github-title {
   margin-bottom: 0.2rem;
   font-size: 0.82rem;
