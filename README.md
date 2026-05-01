@@ -17,8 +17,15 @@ This is a static site and can be deployed directly to:
 - Netlify
 - Vercel (static mode)
 
-## Files
+## Project Structure
 
+- `.vscode/settings.json` - local editor defaults
+- `assets/style.css` - main site styling
+- `assets/utility.css` - utility and reset helpers
+- `assets/canvas.css` - canvas/background styling
+- `assets/javasc.js` - UI interactions (reveal animation + nav state)
+- `assets/canvas.js` - particle canvas engine
+- `css/style.css` - stylesheet entrypoint for imports
+- `particles.js` - particle bootstrap file
+- `CNAME` - custom domain placeholder for static hosting
 - `index.html` - site structure and CV content
-- `styles.css` - styling and responsive layout
-- `script.js` - small UI behavior (reveal animation + dynamic year)
