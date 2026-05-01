@@ -165,6 +165,7 @@ body {
     radial-gradient(circle at 4% 34%, rgba(31, 71, 145, 0.2), rgba(3, 7, 18, 0) 32%),
     radial-gradient(circle at 94% 42%, rgba(31, 71, 145, 0.16), rgba(3, 7, 18, 0) 35%),
     linear-gradient(180deg, #02050d 0%, #040914 34%, #050c19 100%);
+  animation: driftBackground 20s linear infinite;
 }
 
 .background-layer {
@@ -181,6 +182,16 @@ body {
       transparent 1px,
       transparent 24px
     );
+  animation: driftBackground 26s linear infinite reverse;
+}
+
+.background-layer::before {
+  content: "";
+  position: absolute;
+  inset: -20% -10%;
+  background: radial-gradient(circle at 40% 40%, rgba(122, 163, 232, 0.14), rgba(0, 0, 0, 0) 60%);
+  filter: blur(36px);
+  animation: blobFloat 22s ease-in-out infinite;
 }
 
 .scroll-progress {
@@ -192,6 +203,7 @@ body {
   z-index: 70;
   background: linear-gradient(90deg, #77a8ff 0%, #ecf4ff 100%);
   box-shadow: 0 0 18px rgba(119, 168, 255, 0.55);
+  animation: pulseGlow 2.5s ease-in-out infinite;
 }
 
 h1,
@@ -296,13 +308,15 @@ a {
   font-weight: 500;
   padding: 0.46rem 0.7rem;
   border-radius: 0.58rem;
-  transition: color 0.2s ease, background-color 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
   white-space: nowrap;
+  position: relative;
 }
 
 .nav-links a:hover {
   color: #ffffff;
   background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
 }
 
 .nav-links a.active {
@@ -313,6 +327,17 @@ a {
 
 .section {
   padding: 4rem 0;
+  position: relative;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 10% -12% auto -12%;
+  height: 120px;
+  background: radial-gradient(ellipse at center, rgba(122, 161, 230, 0.08), rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
+  animation: sectionGlow 7s ease-in-out infinite alternate;
 }
 
 .scroll-target {
@@ -324,11 +349,126 @@ a {
   display: grid;
   align-content: center;
   padding-top: 3rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-shell {
   text-align: center;
   max-width: 900px;
+  position: relative;
+  z-index: 3;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-animated-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(120, 162, 232, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 162, 232, 0.045) 1px, transparent 1px);
+  background-size: 52px 52px;
+}
+
+.gradient-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, rgba(5, 11, 25, 0.92), rgba(12, 24, 49, 0.72));
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(62px);
+  opacity: 0.4;
+  animation: blobFloat 20s ease-in-out infinite;
+}
+
+.blob-1 {
+  width: 390px;
+  height: 390px;
+  background: rgba(78, 126, 218, 0.7);
+  top: -120px;
+  left: -90px;
+  animation-delay: 0s;
+}
+
+.blob-2 {
+  width: 460px;
+  height: 460px;
+  background: rgba(61, 168, 205, 0.55);
+  bottom: -140px;
+  right: -120px;
+  animation-delay: -6s;
+}
+
+.blob-3 {
+  width: 330px;
+  height: 330px;
+  background: rgba(120, 100, 235, 0.6);
+  top: 36%;
+  right: 14%;
+  animation-delay: -12s;
+}
+
+.floating-elements {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.floating-element {
+  position: absolute;
+  border: 1px solid rgba(133, 170, 235, 0.32);
+  animation: orbitRotate 18s linear infinite;
+}
+
+.element-1 {
+  width: 98px;
+  height: 98px;
+  top: 20%;
+  left: 10%;
+  border-radius: 50%;
+}
+
+.element-2 {
+  width: 78px;
+  height: 78px;
+  top: 62%;
+  left: 80%;
+  animation-delay: -6s;
+}
+
+.element-3 {
+  width: 58px;
+  height: 58px;
+  top: 80%;
+  left: 20%;
+  border-radius: 50%;
+  animation-delay: -11s;
+}
+
+.scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(132, 172, 236, 0.8), transparent);
+  opacity: 0.25;
+  animation: scanlineMove 4.5s linear infinite;
+  z-index: 2;
 }
 
 .eyebrow {
@@ -342,6 +482,7 @@ a {
   border-radius: 999px;
   padding: 0.34rem 0.8rem;
   background: rgba(16, 32, 57, 0.72);
+  animation: pulseGlow 3s ease-in-out infinite;
 }
 
 h1 {
@@ -352,11 +493,42 @@ h1 {
   text-shadow: 0 0 38px rgba(117, 164, 237, 0.32);
 }
 
+.glitch-text {
+  position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.glitch-text::before {
+  color: rgba(123, 165, 238, 0.72);
+  animation: glitchA 2.3s infinite;
+}
+
+.glitch-text::after {
+  color: rgba(99, 215, 223, 0.58);
+  animation: glitchB 2.3s infinite;
+}
+
 .hero h2 {
   font-size: clamp(1.35rem, 3.5vw, 3rem);
   font-weight: 700;
   color: #eaf3ff;
   margin-top: 0.35rem;
+}
+
+.animated-subtitle {
+  background: linear-gradient(90deg, #d8e8ff 0%, #b7d0fb 35%, #9ee4e7 60%, #d8e8ff 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: textShimmer 4s linear infinite;
 }
 
 .lead {
@@ -385,6 +557,7 @@ h1 {
   justify-content: center;
   border: 1px solid transparent;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  animation: pulseGlow 3.3s ease-in-out infinite;
 }
 
 .button:hover {
@@ -422,6 +595,7 @@ h1 {
   background: rgba(11, 23, 41, 0.7);
   border-radius: 0.9rem;
   padding: 1rem 0.9rem;
+  animation: cardFloat 5.2s ease-in-out infinite;
 }
 
 .stat-value {
@@ -443,6 +617,19 @@ h1 {
 
 .section-head h2 {
   font-size: clamp(1.5rem, 2.6vw, 2.25rem);
+  position: relative;
+  display: inline-block;
+}
+
+.section-head h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(133, 175, 238, 0.2), rgba(133, 175, 238, 0.9), rgba(133, 175, 238, 0.2));
+  animation: textShimmer 4s linear infinite;
 }
 
 .section-head p {
@@ -456,6 +643,28 @@ h1 {
   box-shadow: var(--shadow-md);
   padding: 1.15rem;
   backdrop-filter: blur(5px);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.26s ease, box-shadow 0.26s ease, border-color 0.26s ease;
+}
+
+.panel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(170, 201, 243, 0), rgba(170, 201, 243, 0.9), rgba(170, 201, 243, 0));
+  transform: translateX(-130%);
+  animation: borderSweep 3.6s ease-in-out infinite;
+}
+
+.panel:hover {
+  animation-play-state: paused;
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 22px 36px rgba(0, 0, 0, 0.32);
+  border-color: rgba(176, 206, 244, 0.35);
 }
 
 .about-grid {
@@ -473,6 +682,7 @@ h1 {
 .education-card {
   display: grid;
   gap: 0.72rem;
+  animation: cardFloat 6.2s ease-in-out infinite;
 }
 
 .education-image {
@@ -562,6 +772,7 @@ h1 {
 .project-card {
   display: grid;
   gap: 0.78rem;
+  animation: cardFloat 5.8s ease-in-out infinite;
 }
 
 .project-image {
@@ -597,6 +808,14 @@ h1 {
 .cert-card {
   display: grid;
   gap: 0.65rem;
+  animation: cardFloat 6.4s ease-in-out infinite;
+}
+
+.cert-card:nth-child(2n),
+.project-card:nth-child(2n),
+.education-card:nth-child(2n),
+.hero-stats article:nth-child(2n) {
+  animation-delay: -2s;
 }
 
 .cert-card h3 {
