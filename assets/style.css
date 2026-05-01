@@ -957,6 +957,7 @@ h1 {
 }
 
 .pdf-thumb {
+  position: relative;
   border-style: dashed;
   padding: 0.35rem;
 }
@@ -968,6 +969,34 @@ h1 {
   border-radius: 0.5rem;
   background: #ffffff;
   pointer-events: none;
+}
+
+.pdf-thumb-loading::before,
+.pdf-thumb-placeholder::before {
+  content: "PDF Preview";
+  position: absolute;
+  inset: 0.56rem;
+  border: 1px dashed rgba(172, 200, 237, 0.34);
+  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+  font-family: "Sora", sans-serif;
+  font-size: 0.92rem;
+  color: #d6e9ff;
+  background: linear-gradient(180deg, rgba(12, 23, 41, 0.9) 0%, rgba(14, 29, 53, 0.82) 100%);
+}
+
+.pdf-thumb-loading iframe,
+.pdf-thumb-placeholder iframe {
+  display: none;
+}
+
+.pdf-thumb-loaded::before {
+  content: none;
+}
+
+.pdf-thumb-loaded iframe {
+  display: block;
 }
 
 .cert-preview-inline {
@@ -1080,6 +1109,43 @@ h1 {
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+html.perf-lite body,
+html.perf-lite .background-layer,
+html.perf-lite .background-layer::before,
+html.perf-lite .section::before,
+html.perf-lite .blob,
+html.perf-lite .floating-element,
+html.perf-lite .scanline,
+html.perf-lite .glitch-text::before,
+html.perf-lite .glitch-text::after,
+html.perf-lite .animated-subtitle,
+html.perf-lite .button,
+html.perf-lite .hero-stats article,
+html.perf-lite .education-card,
+html.perf-lite .project-card,
+html.perf-lite .cert-card,
+html.perf-lite .panel::after {
+  animation: none !important;
+}
+
+html.perf-lite .blob {
+  filter: blur(22px);
+  opacity: 0.2;
+}
+
+html.perf-lite .site-header,
+html.perf-lite .panel {
+  backdrop-filter: none;
+}
+
+html.perf-lite #particle-canvas {
+  opacity: 0.34;
+}
+
+html.perf-lite .hero-animated-bg {
+  transform: none !important;
 }
 
 @media (max-width: 1080px) {
