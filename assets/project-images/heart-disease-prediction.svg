@@ -1,0 +1,28 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A1532" />
+      <stop offset="1" stop-color="#422B7A" />
+    </linearGradient>
+    <linearGradient id="heart" x1="455" y1="178" x2="745" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8D9B" />
+      <stop offset="1" stop-color="#FF4B6A" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)" />
+  <g opacity="0.18">
+    <circle cx="176" cy="123" r="124" stroke="#C0B6FF" />
+    <circle cx="1020" cy="556" r="144" stroke="#F0A6C6" />
+  </g>
+  <g>
+    <path d="M600 470C600 470 420 356 420 257C420 191 473 145 536 145C574 145 608 165 628 199C648 165 682 145 720 145C783 145 836 191 836 257C836 356 656 470 656 470H600Z" fill="url(#heart)" />
+    <path d="M315 338H422L456 283L520 392L572 310H650L694 370L758 280L815 338H902" stroke="#FFD5E0" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="628" cy="308" r="168" stroke="#BBA9FF" stroke-opacity="0.72" stroke-width="4" />
+  </g>
+  <text x="70" y="587" fill="#F5EFFF" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="700">
+    Heart Disease Prediction - Computer Vision &amp; ML
+  </text>
+  <text x="72" y="627" fill="#CEBEEB" font-family="Segoe UI, Arial, sans-serif" font-size="24">
+    ECG image analysis pipeline with real-time risk assessment
+  </text>
+</svg>
