@@ -294,3 +294,62 @@ if (heroSection && heroAnimatedBg && !prefersReducedMotion && !performanceLite &
     { once: true }
   );
 }
+
+const cvContactEmail = "ayushjung.kunwar369@gmail.com";
+const gmailContactForm = document.getElementById("gmail-contact-form");
+const contactStatus = document.getElementById("contact-status");
+
+if (gmailContactForm instanceof HTMLFormElement && contactStatus) {
+  const nameInput = gmailContactForm.querySelector("#contact-name");
+  const emailInput = gmailContactForm.querySelector("#contact-email");
+  const messageInput = gmailContactForm.querySelector("#contact-message");
+
+  const normalizeSingleLine = (value) => value.replace(/\s+/g, " ").trim();
+
+  gmailContactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (
+      !(nameInput instanceof HTMLInputElement) ||
+      !(emailInput instanceof HTMLInputElement) ||
+      !(messageInput instanceof HTMLTextAreaElement)
+    ) {
+      return;
+    }
+
+    if (!gmailContactForm.checkValidity()) {
+      gmailContactForm.reportValidity();
+      contactStatus.textContent = "Please complete all fields before opening Gmail.";
+      return;
+    }
+
+    const senderName = normalizeSingleLine(nameInput.value);
+    const senderEmail = normalizeSingleLine(emailInput.value);
+    const message = messageInput.value.trim();
+
+    const subject = `Portfolio contact from ${senderName}`;
+    const body = [
+      `Name: ${senderName}`,
+      `Sender Gmail: ${senderEmail}`,
+      "",
+      "Message:",
+      message,
+    ].join("\n");
+
+    const gmailComposeUrl =
+      `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(cvContactEmail)}` +
+      `&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    const gmailWindow = window.open(gmailComposeUrl, "_blank", "noopener,noreferrer");
+
+    if (!gmailWindow) {
+      const fallbackMailto =
+        `mailto:${cvContactEmail}?subject=${encodeURIComponent(subject)}` +
+        `&body=${encodeURIComponent(body)}`;
+      window.location.href = fallbackMailto;
+    }
+
+    contactStatus.textContent = `Gmail draft prepared for ${cvContactEmail}.`;
+    gmailContactForm.reset();
+  });
+}
