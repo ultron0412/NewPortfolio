@@ -1084,6 +1084,53 @@ h1 {
   background: rgba(16, 32, 56, 0.82);
 }
 
+.contact-form-panel {
+  grid-column: 1 / -1;
+}
+
+.gmail-contact-form {
+  margin-top: 0.35rem;
+  display: grid;
+  gap: 0.58rem;
+}
+
+.gmail-contact-form label {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #d4e6ff;
+}
+
+.gmail-contact-form input,
+.gmail-contact-form textarea {
+  width: 100%;
+  border: 1px solid rgba(145, 178, 222, 0.34);
+  border-radius: 0.72rem;
+  background: rgba(8, 18, 32, 0.84);
+  color: #e8f2ff;
+  padding: 0.64rem 0.74rem;
+  font-family: "Outfit", sans-serif;
+}
+
+.gmail-contact-form textarea {
+  resize: vertical;
+  min-height: 132px;
+}
+
+.gmail-contact-form input:focus,
+.gmail-contact-form textarea:focus {
+  outline: 2px solid rgba(179, 211, 250, 0.42);
+  border-color: rgba(194, 218, 249, 0.6);
+}
+
+.contact-form-panel .button {
+  margin-top: 0.3rem;
+  width: fit-content;
+}
+
+#contact-status {
+  min-height: 1.1rem;
+}
+
 .subtle {
   font-size: 0.9rem;
   color: #b6cae4;
