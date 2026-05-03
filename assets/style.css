@@ -234,6 +234,7 @@ a {
   z-index: 60;
   border-bottom: 1px solid rgba(141, 177, 223, 0.16);
   background: rgba(4, 9, 20, 0.76);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 }
 
@@ -727,6 +728,7 @@ h1 {
   background: linear-gradient(180deg, rgba(15, 29, 52, 0.82) 0%, rgba(10, 20, 38, 0.86) 100%);
   box-shadow: var(--shadow-md);
   padding: 1.15rem;
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   position: relative;
   overflow: hidden;
@@ -1137,6 +1139,7 @@ html.perf-lite .blob {
 
 html.perf-lite .site-header,
 html.perf-lite .panel {
+  -webkit-backdrop-filter: none;
   backdrop-filter: none;
 }
 
