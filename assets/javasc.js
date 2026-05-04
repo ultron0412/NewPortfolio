@@ -163,54 +163,6 @@ if (
   previewClose.addEventListener("click", closePreview);
 }
 
-const inlinePdfThumbs = Array.from(document.querySelectorAll(".pdf-thumb iframe[data-src]"));
-
-if (inlinePdfThumbs.length > 0) {
-  inlinePdfThumbs.forEach((frame) => {
-    frame.closest(".pdf-thumb")?.classList.add("pdf-thumb-loading");
-  });
-
-  if (prefersReducedMotion || performanceLite) {
-    inlinePdfThumbs.forEach((frame) => {
-      const holder = frame.closest(".pdf-thumb");
-      if (!holder) return;
-      holder.classList.remove("pdf-thumb-loading");
-      holder.classList.add("pdf-thumb-placeholder");
-    });
-  } else {
-    const pdfThumbObserver = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-
-          const frame = entry.target;
-          const source = frame.getAttribute("data-src");
-          if (source && !frame.getAttribute("src")) {
-            frame.setAttribute("src", source);
-          }
-          frame.closest(".pdf-thumb")?.classList.remove("pdf-thumb-loading");
-          frame.closest(".pdf-thumb")?.classList.add("pdf-thumb-loaded");
-          observer.unobserve(frame);
-        });
-      },
-      {
-        threshold: 0.08,
-        rootMargin: "160px 0px",
-      }
-    );
-
-    inlinePdfThumbs.forEach((frame) => pdfThumbObserver.observe(frame));
-
-    window.addEventListener(
-      "beforeunload",
-      () => {
-        pdfThumbObserver.disconnect();
-      },
-      { once: true }
-    );
-  }
-}
-
 const heroSection = document.getElementById("home");
 const heroAnimatedBg = heroSection?.querySelector(".hero-animated-bg");
 
