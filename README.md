@@ -20,13 +20,12 @@ This is a static site and can be deployed directly to:
 ## Project Structure
 
 - `.vscode/settings.json` - local editor defaults
+- `assets/app.css` - bundled stylesheet entrypoint (utility + canvas + theme styles)
 - `assets/style.css` - main site styling
 - `assets/utility.css` - utility and reset helpers
 - `assets/canvas.css` - canvas/background styling
 - `assets/javasc.js` - UI interactions (reveal animation + nav state)
 - `assets/canvas.js` - particle canvas engine
 - `assets/certificates/` - certificate SVG/PDF assets used in the Certifications section
-- `css/style.css` - stylesheet entrypoint for imports
 - `particles.js` - particle bootstrap file
-- `CNAME` - custom domain placeholder for static hosting
 - `index.html` - site structure and CV content
