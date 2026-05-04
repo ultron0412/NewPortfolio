@@ -862,6 +862,16 @@ h1 {
   animation: cardFloat 5.8s ease-in-out infinite;
 }
 
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card-link:focus-visible {
+  outline: 2px solid rgba(192, 218, 251, 0.8);
+  outline-offset: 3px;
+}
+
 .project-image {
   margin: 0;
   border: 1px solid rgba(163, 195, 237, 0.22);
@@ -879,11 +889,39 @@ h1 {
   object-fit: contain;
 }
 
+.project-image-badge span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 118px;
+  padding: 0.36rem 0.78rem;
+  border-radius: 999px;
+  border: 1px solid rgba(174, 205, 245, 0.42);
+  background: rgba(65, 108, 192, 0.34);
+  color: #edf5ff;
+  font-family: "Sora", sans-serif;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
 .project-meta {
   color: #a9c0df;
   font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.project-link-hint {
+  justify-self: start;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.86rem;
+  border-radius: 0.55rem;
+  padding: 0.38rem 0.62rem;
+  color: #eaf4ff;
+  background: rgba(58, 104, 186, 0.36);
+  border: 1px solid rgba(146, 178, 220, 0.3);
 }
 
 .cert-grid {
